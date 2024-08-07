@@ -1,0 +1,37 @@
+{
+    "name": "encrypt-cli",
+    "version": "1.0.0",
+    "description": "非对称加密文件命令行工具",
+    "type": "commonjs",
+    "bin": {
+        "encrypt-cli": "./bin/encrypt-cli.js"
+    },
+    "scripts": {
+        "start": "node bin/encrypt-cli.js",
+        "build": "pkg . --targets node16"
+    },
+    "pkg": {
+        "targets": [
+            "node16-win-x64",
+            "node16-macos-x64",
+            "node16-linux-x64"
+        ],
+        "outputPath": "dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^12.1.0"
+    },
+    "volta": {
+        "node": "20.11.0",
+        "pnpm": "9.7.0"
+    },
+    "devDependencies": {
+        "pkg": "^5.8.1"
+    },
+    "engines": {
+        "node": ">=20.11.0"
+    }
+}
